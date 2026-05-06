@@ -1,0 +1,34 @@
+:root {
+  --bg: #121214;
+  --cream: #fff2dc;
+  --purple: #6e1eff;
+  --pink: #ff2e92;
+  --orange: #ff5a1f;
+  --yellow: #ffc533;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; background: var(--bg); color: var(--cream); }
+a { color: inherit; text-decoration: none; }
+.top-nav { position: fixed; top: 0; width: 100%; z-index: 20; display: flex; justify-content: space-between; padding: 1rem 1.25rem; background: linear-gradient(90deg, #000b, #0002); backdrop-filter: blur(5px); }
+.top-nav .logo { letter-spacing: .04em; color: var(--yellow); }
+.top-nav div { display: flex; gap: 1rem; }
+.hero-scroll-wrap { position: relative; height: 260vh; }
+.hero-canvas, .hero-fallback { position: sticky; top: 0; width: 100%; height: 100vh; display: block; background: radial-gradient(circle at 50% 30%, #40202f, #151515 60%); }
+.hero-overlay { position: absolute; top: 22vh; left: 6vw; z-index: 2; max-width: 45rem; }
+.badge { display: inline-block; background: var(--yellow); color: #111; padding: .4rem .7rem; transform: rotate(-4deg); }
+h1 { font-size: clamp(2.5rem, 9vw, 8rem); line-height: .95; margin: .7rem 0; background: linear-gradient(90deg, var(--purple), var(--pink), var(--orange)); -webkit-background-clip: text; color: transparent; }
+.lede { font-size: clamp(1rem, 3vw, 2rem); }
+.cta-row { display: flex; gap: .8rem; flex-wrap: wrap; }
+.btn { padding: .75rem 1rem; border: 2px solid #fff3; font-weight: 700; cursor: pointer; }
+.btn-primary { background: linear-gradient(90deg, var(--pink), var(--orange)); color: #fff; }
+.btn-secondary { background: #20152e; color: var(--cream); }
+.section { padding: 5rem 1.25rem; }
+.cards { background: #141018; }
+.card-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.card { padding: 1.2rem; border: 2px dashed #ffffff30; background: #27142d; }
+.favorites { background: linear-gradient(120deg, #2a0c17, #2c1305); }
+.favorites ul { padding-left: 1.2rem; }
+.cta-block { text-align: center; background: #1b1b1e; }
+.cta-block.hot { background: linear-gradient(120deg, #3b0f1b, #52230b); }
+.footer { padding: 2rem 1rem; text-align: center; color: #cbb5a0; }
+@media (max-width: 768px) { .hero-overlay { top: 18vh; max-width: 90%; } .hero-scroll-wrap { height: 200vh; } }
